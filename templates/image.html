@@ -4,10 +4,12 @@
     <div class="text-center">
         <img id="process-image" class="rounded mt-5 mb-5" src="static/image/image.{{formate}}">
     </div>
+<hr>
     <div class="container">
+        <h2 class="text-center mt-5">some colors are used in this image are</h2>
         <div class="row">
             {% for color in color_dictionary %}
-            <div class="card col- m-3" style="width: 18rem; height: 15rem; background-color: rgb({{color[0]}}, {{color[1]}}, {{color[2]}})">
+            <div class="card m-3" style="width: 18rem; height: 15rem; background-color: rgb({{color[0]}}, {{color[1]}}, {{color[2]}})">
 <!--              <img src="..." class="card-img-top" alt="...">-->
               <div class="card-body">
                 <h5 class="card-title"></h5>

@@ -13,21 +13,26 @@ p {
     font-size: 1.2rem;
 }
 
+hr {
+    color: white;
+    border-bottom: dotted black 2px;
+    width: 10%;
+    margin: auto;
+    border-width: 10px;
+}
+
 .top-header {
     font-family: 'Edu NSW ACT Foundation', cursive;
-    height: 18rem;
+    height: 10rem;
     width: auto;
     background-color: #100F0F;
-    text-align: center;
-    padding-top: 100px;
+    padding-top: 3.5rem;
     color: #9CB4CC;
 }
 
-.footer {
-    height: 10rem;
-    width: auto;
-    background-color: #748DA6;
-    background-image: linear-gradient(to bottom right, #748DA6, #D3CEDF)
+.footer-image {
+    height: 8%;
+    width: 40%;
 }
 
 .file {
@@ -45,4 +50,9 @@ p {
     background-color: white;
     padding: 5px;
     border-radius: 10px;
+}
+
+.header-image {
+    height: 100px;
+    display: inline;
 }
