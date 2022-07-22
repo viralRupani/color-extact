@@ -1,0 +1,48 @@
+/*
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.top-header {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    height: 18rem;
+    width: auto;
+    background-color: #100F0F;
+    text-align: center;
+    padding-top: 100px;
+    color: #9CB4CC;
+}
+
+.footer {
+    height: 10rem;
+    width: auto;
+    background-color: #748DA6;
+    background-image: linear-gradient(to bottom right, #748DA6, #D3CEDF)
+}
+
+.file {
+    margin: auto;
+    width: 400px;
+}
+
+#process-image {
+    width: 40%;
+    height: 40%;
+}
+
+#color_p {
+    display: inline;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}

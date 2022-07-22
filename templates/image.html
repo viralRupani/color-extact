@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="text-center">
+        <img id="process-image" class="rounded mt-5 mb-5" src="static/image/image.{{formate}}">
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for color in color_dictionary %}
+            <div class="card col- m-3" style="width: 18rem; height: 15rem; background-color: rgb({{color[0]}}, {{color[1]}}, {{color[2]}})">
+<!--              <img src="..." class="card-img-top" alt="...">-->
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                  <p id="color_p">#{{color_dictionary[color]}}</p>
+<!--                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}
