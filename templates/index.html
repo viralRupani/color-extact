@@ -5,8 +5,17 @@
     <p class="mt-5 mb-0"><em>*We only supports jpg and png for now</em></p>
     <form action="{{ url_for('home') }}" method="post" class="text-center" enctype="multipart/form-data">
         <div class="col-xs-2">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
             <label for="file"></label>
-            <input class="form-control file" type="file" id="file" name="file" accept="image/*">
+            <input class="form-control file" type="file" id="file" name="file" accept=".png, .jpg">
             <button class="btn btn-outline-dark mt-3" name="submit">Submit</button>
         </div>
     </form>

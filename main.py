@@ -1,11 +1,12 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, flash
 from werkzeug.utils import secure_filename
 from PIL import Image
 import numpy as np
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+# app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = 'poiufpe;oiuf'
 app.config['UPLOAD_FOLDER'] = 'static/image/'
 
 
@@ -21,14 +22,18 @@ def home():
             filename = secure_filename(file.filename)
             filename = filename.replace(filename[:-4], 'image')
             file_format = filename.split('.')[1]
-            if file_format == 'png':
+            if file_format.lower() == 'jpg' or file_format.lower() == 'png':
+                if file_format == 'png':
+                    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                    image = Image.open('static/image/image.png')
+                    img = image.convert('RGB')
+                    img.save('static/image/image.jpg')
+                    os.remove('static/image/image.png')
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                image = Image.open('static/image/image.png')
-                img = image.convert('RGB')
-                img.save('static/image/image.jpg')
-                os.remove('static/image/image.png')
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('show_image'))
+                return redirect(url_for('show_image'))
+            else:
+                flash('Please submit only jpg or png Images')
+                return redirect(url_for('home'))
     return render_template('index.html')
 
 

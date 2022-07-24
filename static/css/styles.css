@@ -21,6 +21,19 @@ hr {
     border-width: 10px;
 }
 
+
+#process-image {
+    width: 40%;
+    height: 40%;
+}
+
+#color_p {
+    display: inline;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .top-header {
     font-family: 'Edu NSW ACT Foundation', cursive;
     height: 10rem;
@@ -40,19 +53,11 @@ hr {
     width: 400px;
 }
 
-#process-image {
-    width: 40%;
-    height: 40%;
-}
-
-#color_p {
-    display: inline;
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-}
-
 .header-image {
     height: 100px;
     display: inline;
+}
+
+.flashes {
+    color: red;
 }
